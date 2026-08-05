@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = [1, 5, 6, 7, 8];
+      for (let i = 0; i < a.length; i += 2) {
+        console.log(a[i]);
+      }
+      console.log(a.join("/"));
+      let a1 = [[1, 5, 6, 7], 8, 8, 8, 8, 8, 8];
+      console.log(a1.flat(Infinity));
+      let s1 = "gfg";
+      let s2 = `This is from ${s1}`;
+      console.log(s2);
+      let s3 = `
+      This
+      is a 
+      multiline string 
+      `;
+      console.log(s3);
+    </script>
+  </body>
+</html>

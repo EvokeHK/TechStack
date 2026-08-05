@@ -12,6 +12,18 @@
       console.log("This is just a random message hello");
       console.log(a);
       console.log(a[2]);
+      console.log("a.length is " + a.length);
+      console.log("the last element is " + a[a.length - 1]);
+      a.unshift(45);
+      console.log(a[0]);
+      a.pop();
+      console.log("The new array is " + a);
+      a.forEach(function (item, i, arr) {
+        console.log(item);
+        console.log(i);
+        console.log(arr);
+      });
+      console.log(a.toString());
     </script>
   </body>
 </html>
