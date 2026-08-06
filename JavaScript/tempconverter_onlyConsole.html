@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMP CONVERTER</title>
+  </head>
+  <body>
+    <h1>Check console</h1>
+    <script>
+      function convertCelsiusToFahrenheit(c) {
+        return c * (9 / 5) + 32;
+      }
+      function convertFahrenheitToCelsius(f) {
+        return (f - 32) * (5 / 9);
+      }
+      function convertCelsiusToKelvin(c) {
+        return c + 273.15;
+      }
+      function convertKelvinToCelsius(k) {
+        return k - 273.15;
+      }
+      function convertFahrenheitToKelvin(f) {
+        return (f - 32) * (5 / 9) + 273.15;
+      }
+      function convertKelvinToFahrenheit(k) {
+        return (k - 273.15) * (9 / 5) + 32;
+      }
+
+      console.log(convertCelsiusToFahrenheit(56));
+      console.log(convertFahrenheitToCelsius(26));
+      console.log(convertCelsiusToKelvin(44));
+      console.log(convertKelvinToCelsius(520));
+      console.log(convertFahrenheitToKelvin(456));
+      console.log(convertKelvinToFahrenheit(1245));
+    </script>
+  </body>
+</html>
