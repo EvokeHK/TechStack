@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb On/Off</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #1e1e2e;
+        font-family: sans-serif;
+      }
+
+      .bulb {
+        font-size: 8rem;
+        cursor: pointer;
+        user-select: none;
+        transition: filter 0.2s ease;
+      }
+
+      /* when ON: glowing yellow */
+      .bulb.on {
+        filter: drop-shadow(0 0 35px #ffd54a);
+      }
+
+      button {
+        margin-top: 2rem;
+        padding: 0.6rem 1.6rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        background: #7c3aed;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #6d28d9;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bulb" class="bulb">💡</div>
+    <button id="toggleBtn">Turn ON</button>
+
+    <script>
+      const bulb = document.getElementById("bulb");
+      const btn = document.getElementById("toggleBtn");
+
+      // toggles whether the bulb is on, then updates the UI
+      function toggleBulb() {
+        const isOn = bulb.classList.toggle("on");
+        btn.textContent = isOn ? "Turn OFF" : "Turn ON";
+      }
+
+      // switch on and off by clicking the bulb itself OR the button
+      bulb.addEventListener("click", toggleBulb);
+      btn.addEventListener("click", toggleBulb);
+    </script>
+  </body>
+</html>
